@@ -183,8 +183,8 @@ a {
       flex-wrap: wrap;
       & > * {
         @media all and (max-width: $fullPageWidth) {
-          flex: 1;
-          min-width: 140px;
+          flex: 0;
+          min-width: 0px;
         }
       }
     }
@@ -201,9 +201,9 @@ a {
 
   & .center,
   & footer {
-    margin-left: auto;
+    margin-left: $sidePanelWidth * 1.5;
     margin-right: auto;
-    width: $pageWidth;
+    width: $fullPageWidth - $sidePanelWidth;
     @media all and (max-width: $fullPageWidth) {
       width: initial;
       margin-left: 0;
